@@ -4,6 +4,25 @@ A multi-agent deep research platform with local-first Ollama inference and autom
 
 ---
 
+## Screenshots
+
+### New Conversation
+Start a fresh research session — type a query and watch the multi-agent chain stream results in real time with a live agent trace.
+
+![New Conversation](images/deep-research-agent-1.png)
+
+### Existing Conversation
+Resume any previous session — conversations persist across page refreshes with full message history and vector store context.
+
+![Existing Conversation](images/deep-research-agent-2.png)
+
+### Conversation Search
+Press `Ctrl+K` / `⌘K` to open the search modal — filter conversations by keyword, navigate with arrow keys, and jump to any session instantly.
+
+![Conversation Search](images/deep-research-agent-3.png)
+
+---
+
 ## Features
 
 ### Multi-Agent Architecture
