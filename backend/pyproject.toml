@@ -1,0 +1,45 @@
+[project]
+name = "deep-research-agent"
+version = "0.1.0"
+description = "Multi-agent deep research platform powered by local Ollama inference"
+readme = "../README.md"
+requires-python = ">=3.11"
+dependencies = [
+    # Web framework
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.32.0",
+    "sse-starlette>=2.1.0",
+    "python-multipart>=0.0.12",
+    # LLM Inference
+    "ollama>=0.4.0",
+    "openai>=1.30.0",
+    # Vector Database
+    "chromadb>=0.5.0",
+    # Web Search
+    "duckduckgo-search>=6.0.0",
+    # Web Scraping
+    "httpx>=0.27.0",
+    "beautifulsoup4>=4.12.0",
+    "lxml>=5.0.0",
+    # PDF Processing
+    "PyMuPDF>=1.24.0",
+    "pdfplumber>=0.11.0",
+    "Pillow>=10.0.0",
+    # Utilities
+    "python-dateutil>=2.9.0",
+    "pydantic>=2.0.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.scripts]
+deep-research = "backend.main:start"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[tool.hatch.build.targets.wheel.force-include]
+"." = "backend"
